@@ -1,0 +1,11 @@
+<h1>Angular Pagination Example - ItSolutionStuff.com</h1>
+
+<ul class="list-group">
+  <li
+      *ngFor="let post of posts| paginate: { itemsPerPage: 10, currentPage: p }"
+      class="list-group-item">
+      {{ post.serialNumber }}
+  </li>
+
+</ul>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
